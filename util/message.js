@@ -1,0 +1,15 @@
+module.exports = {
+  ERROR_MESSAGE: {
+    WEATHER: {
+      EXIST: "WEATHER_EXIST",
+      NOT_FOUND: "WEATHER_NOT_FOUND",
+      INVALD: "WEATHER_INVALID"
+    }
+  },
+  SUCCESS_MESSAGE: {
+    WEATHER: {
+      CREATED: "WEATHER_CREATED",
+      DELETED: "WEATHER_DELETED"
+    }
+  }
+};

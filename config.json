@@ -1,0 +1,9 @@
+{
+    "PORT": 5000,
+    "BASE_URL": "/api",
+
+    "mongodb":{
+        "host":"localhost:27017",
+        "database":"weather"
+    }
+}
