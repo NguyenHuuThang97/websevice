@@ -5,7 +5,7 @@ var autoIncrement = require("mongodb-autoincrement");
 mongoose.Promise = global.Promise;
 // kết nối với db
 var url = 'mongodb://localhost:27017/weather' ;
-var con = mongoose.connect(url, function(err,db) {
+var con = mongoose.connect(url, function(err) {
   if (err) {
       console.log('err: ' + err);
   }

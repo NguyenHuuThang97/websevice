@@ -4,12 +4,21 @@ module.exports = {
       EXIST: "WEATHER_EXIST",
       NOT_FOUND: "WEATHER_NOT_FOUND",
       INVALD: "WEATHER_INVALID"
+    },
+    USER: {
+      EXIST: 'USER_EXIST',
+      NOT_FOUND: 'USER_NOT_FOUND',
+      INVALD: 'USER_INVALID'
     }
   },
   SUCCESS_MESSAGE: {
     WEATHER: {
       CREATED: "WEATHER_CREATED",
       DELETED: "WEATHER_DELETED"
+    },
+    USER: {
+      CREATED: 'USER_CREATED',
+      DELETED: 'USER_DELETED'
     }
   }
 };

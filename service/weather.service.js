@@ -9,13 +9,11 @@ module.exports = {
 };
 
 function getAllWeather(callback) {
-  //vào db lấy tất cả địa điểm ra
+  
   weather.find({}).exec((err, weathers) => {
-    if (err) {
-      //trong quá trình lấy nếu có xảy ra lỗi
+    if (err) {   
       callback(err);
     } else {
-      //đưa kết quả cho controller
       callback(null, weathers);
     }
   });
@@ -43,10 +41,17 @@ function getOneWeather(id) {
 
 function createWeather(request, callback) {
   var newWeather = new weather({
+    name:request.name,
+    description:request.description,
     day: request.day,
-    cityName: request.cityName,
-    state: request.state,
-    temp: request.temp
+    time:request.time,
+    tempmax:request.tempmax,
+    tempmin:request.tempmin,
+    tempnow:request.tempnow,
+    humid:request.humid,
+    statenow: request.statenow,
+    uv: request.uv,
+    winspeed:request.winspeed
   });
  
   newWeather.save((err, response) => {
@@ -74,7 +79,7 @@ function updateWeather(request) {
           } else {
             // có địa chỉ id của địa điểm mình cần sửa thì cập nhật lại dữ liệu
             weatherData.day = request.day || weatherData.day;
-            weatherData.cityName = request.cityName || weatherData.cityName; // nếu mà có thay đổi thì thay đổi không thì giữ nguyên cái cũ
+            weatherData.cityName = request.cityName || weatherData.cityName; 
             weatherData.state = request.state || weatherData.state;
             weatherData.temp = request.temp || weatherData.temp;
 

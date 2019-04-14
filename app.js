@@ -4,12 +4,13 @@ var express = require("express");
 const bodyParser = require("body-parser");
 var app = express();
 var weather = require("./model/weather");
+var use = require("./model/user.model");
 var weatherRouter = require('./router/weather.router')
 const PORT = process.env.PORT || 5000; // process.env là 1 object chưa tất cả các thông tin về môi trường mà nodejs đang chạy
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+jsonwebtoken = require("jsonwebtoken");
 var allowCrossDomain = function(req,res,next){
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');

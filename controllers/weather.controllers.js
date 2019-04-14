@@ -36,10 +36,17 @@ function getOneWeather(req,res,next){
 
 function createWeather(req,res,next){
     var params = {
+        name:req.body.name,
+        description:req.body.description,
         day: req.body.day,
-        cityName: req.body.cityName,
-        state:req.body.state,
-        temp:req.body.temp
+        time:req.body.time,
+        tempmax:req.body.tempmax,
+        tempmin:req.body.tempmin,
+        tempnow:req.body.tempnow,
+        humid:req.body.humid,
+        statenow: req.body.statenow,
+        uv: req.body.uv,
+        winspeed:req.body.winspeed
     }
 
     weatherService.createWeather(params,(err,response) => {
@@ -53,10 +60,17 @@ function createWeather(req,res,next){
 
 function updateWeather(req,res,next){
     let params = {
+        name:req.body.name,
+        description:req.body.description,
         day: req.body.day,
-        cityName: req.body.cityName,
-        state:req.body.state,
-        temp:req.body.temp,
+        time:req.body.time,
+        tempmax:req.body.tempmax,
+        tempmin:req.body.tempmin,
+        tempnow:req.body.tempnow,
+        humid:req.body.humid,
+        statenow: req.body.statenow,
+        uv: req.body.uv,
+        winspeed:req.body.winspeed
     }
 
     weatherService.updateWeather(params).then((response) =>{
